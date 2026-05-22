@@ -1,9 +1,9 @@
 import { NavLink, Route, Routes } from 'react-router-dom'
-import Activities from './components/Activities.tsx'
-import Leaderboard from './components/Leaderboard.tsx'
-import Teams from './components/Teams.tsx'
-import Users from './components/Users.tsx'
-import Workouts from './components/Workouts.tsx'
+import Activities from './components/Activities.jsx'
+import Leaderboard from './components/Leaderboard.jsx'
+import Teams from './components/Teams.jsx'
+import Users from './components/Users.jsx'
+import Workouts from './components/Workouts.jsx'
 import './App.css'
 
 const codespaceName = import.meta.env.VITE_CODESPACE_NAME
