@@ -182,3 +182,93 @@
     border-right-color: var(--border);
   }
 }
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 24px;
+  padding: 24px;
+  color: var(--text);
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  margin: 0;
+}
+
+.app-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.app-nav a {
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: var(--accent-bg);
+  color: var(--text-h);
+  transition: background-color 0.2s ease;
+}
+
+.app-nav a.active,
+.app-nav a:hover {
+  background: var(--accent);
+  color: white;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.page-note {
+  margin: 12px 0 18px;
+  color: var(--muted);
+}
+
+.error {
+  color: var(--danger);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid var(--border);
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background: var(--surface);
+}
+
+@media (max-width: 780px) {
+  .app-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .app-nav {
+    justify-content: stretch;
+  }
+
+  .app-nav a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
