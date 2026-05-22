@@ -13,3 +13,4 @@ async function disconnectDatabase() {
 }
 
 export { connectDatabase, disconnectDatabase, MONGO_URI, mongoose }
+export default mongoose
