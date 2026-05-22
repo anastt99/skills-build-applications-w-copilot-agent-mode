@@ -11,7 +11,7 @@ const app = express()
 const PORT = Number(process.env.PORT || 8000)
 const codespace = process.env.CODESPACE_NAME
 const PUBLIC_API_URL = codespace
-  ? `https://${codespace}-8000.githubpreview.dev`
+  ? `https://${codespace}-8000.app.github.dev`
   : `http://localhost:${PORT}`
 
 app.use(cors())
