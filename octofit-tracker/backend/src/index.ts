@@ -1,6 +1,6 @@
 import cors from 'cors'
 import express from 'express'
-import { connectDatabase } from './database.ts'
+import { connectDatabase } from './config/database.ts'
 import activitiesRouter from './routes/activities.ts'
 import leaderboardRouter from './routes/leaderboard.ts'
 import teamsRouter from './routes/teams.ts'

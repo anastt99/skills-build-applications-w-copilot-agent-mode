@@ -1,4 +1,4 @@
-import { connectDatabase, disconnectDatabase, MONGO_URI } from '../database.ts'
+import { connectDatabase, disconnectDatabase, MONGO_URI } from '../config/database.ts'
 import Activity from '../models/activity.ts'
 import Leaderboard from '../models/leaderboard.ts'
 import Team from '../models/team.ts'
