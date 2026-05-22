@@ -1,4 +1,4 @@
-import mongoose from 'mongoose'
+import { connectDatabase, disconnectDatabase, MONGO_URI } from '../database.ts'
 import Activity from '../models/activity.ts'
 import Leaderboard from '../models/leaderboard.ts'
 import Team from '../models/team.ts'
@@ -6,12 +6,11 @@ import User from '../models/user.ts'
 import Workout from '../models/workout.ts'
 
 // Seed the octofit_db database with test data
-const MONGO_URI = 'mongodb://127.0.0.1:27017/octofit_db'
-
 async function seedDatabase() {
   console.log('Seed the octofit_db database with test data')
+  console.log('Using MongoDB URI:', MONGO_URI)
 
-  await mongoose.connect(MONGO_URI)
+  await connectDatabase()
 
   await Promise.all([
     User.deleteMany({}),
@@ -107,7 +106,7 @@ async function seedDatabase() {
   console.log(`  activities: ${activities.length}`)
   console.log('  leaderboard entries: 4')
 
-  await mongoose.disconnect()
+  await disconnectDatabase()
 }
 
 seedDatabase()
